@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Javascript practice</title>
+
+</head>
+
+
+<body>
+
+	<p>How many fingers are you holding up</p>
+
+	<p>
+		<select id="input">
+		
+			<option>0</option>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+
+		</select>
+
+	</p>
+
+	<button id="guess">Guess</button>
+
+		<script>
+
+			document.getElementById("guess").onclick = function() {
+
+				var yourNumber = document.getElementById("input").value;
+
+				var gotIt = false;
+
+				var numberOfGuesses = 1;
+
+				while (gotIt == false) {
+
+				var myGuess = Math.floor(Math.random() * 6)
+
+					if (myGuess == yourNumber) {
+
+						gotIt = true;
+
+						alert("Got it was a " + myGuess + ". it took me " + numberOfGuesses + " guesses");
+
+					} else {
+
+						numberOfGuesses++
+					}
+
+				}
+
+			}
+				
+
+		</script>
+
+</body>
+
+</html>
